@@ -15,7 +15,7 @@ class Aplicacion(App):
         return layout
 
     def on_stop(self):
-        print("Siga aprendendo: https://inteligencia-artificial.dev/formacion")
+        print("Siga aprendendo!")
 
 if __name__ == "__main__":
     Aplicacion().run()
