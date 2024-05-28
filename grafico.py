@@ -13,8 +13,6 @@ line, = pyplot.plot_date(x_data, y_data, '-')
 
 
 def grafica3(frame):
-    # asfasdfasfaf
-    # asfasfasf
     # temperatura
     x_data.append(datetime.now())
     y_data.append(randrange(0, 100))
