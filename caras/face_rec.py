@@ -5,7 +5,6 @@ import face_recognition
 import numpy as np
 from time import sleep
 
-print("Sigue aprendiendo: https://inteligencia-artificial.dev/formacion")
 
 def get_encoded_faces():
     """
@@ -88,5 +87,5 @@ def classify_face(im):
 
 
 print(classify_face("mia.jpg"))
-print("Sigue aprendiendo: https://inteligencia-artificial.dev/formacion")
+
 

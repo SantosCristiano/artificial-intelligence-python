@@ -1,7 +1,0 @@
-cmake
-dlib
-face_recognition
-numpy
-opencv-python
-
-Sigue aprendiendo gratis en: https://inteligencia-artificial.dev
