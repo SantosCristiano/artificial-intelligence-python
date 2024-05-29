@@ -1,0 +1,4 @@
+#guia de instalacion de librerias https://www.learnopencv.com/install-opencv-3-and-dlib-on-windows-python-only/
+
+#Alternativas:
+https://stackoverflow.com/questions/41912372/dlib-installation-on-windows-10
