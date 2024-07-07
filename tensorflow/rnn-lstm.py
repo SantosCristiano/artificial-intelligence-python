@@ -2,8 +2,8 @@ import tensorflow as tf
 import numpy as np
 import os
 
-# Carregar e pré-processar dados
-path_to_file = tf.keras.utils.get_file('shakespeare.txt', 'https://storage.googleapis.com/download.tensorflow.org/data/shakespeare.txt')
+# Carregar e pré-processar dados do arquivo local
+path_to_file = 'shakespeare.txt'  # Caminho para o arquivo baixado manualmente
 text = open(path_to_file, 'rb').read().decode(encoding='utf-8')
 
 # O texto contém 65 caracteres únicos
@@ -39,7 +39,8 @@ rnn_units = 1024
 # Definir a arquitetura do modelo LSTM
 def build_model(vocab_size, embedding_dim, rnn_units, batch_size):
     model = tf.keras.Sequential([
-        tf.keras.layers.Embedding(vocab_size, embedding_dim, batch_input_shape=[batch_size, None]),
+        tf.keras.layers.InputLayer(input_shape=(None,), batch_size=batch_size),
+        tf.keras.layers.Embedding(vocab_size, embedding_dim),
         tf.keras.layers.LSTM(rnn_units, return_sequences=True, stateful=True, recurrent_initializer='glorot_uniform'),
         tf.keras.layers.Dense(vocab_size)
     ])
@@ -55,7 +56,7 @@ model.compile(optimizer='adam', loss=loss)
 
 # Configurar checkpoints
 checkpoint_dir = './training_checkpoints'
-checkpoint_prefix = os.path.join(checkpoint_dir, "ckpt_{epoch}")
+checkpoint_prefix = os.path.join(checkpoint_dir, "ckpt_{epoch}.weights.h5")
 checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(filepath=checkpoint_prefix, save_weights_only=True)
 
 # Treinar o modelo
