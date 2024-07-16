@@ -26,6 +26,7 @@ This repository contains various projects and exercises related to Artificial In
   - `14_neural_network_cifar10_vgg_3_data_augmentation.ipynb` - CIFAR-10 with data augmentation.
   - `15_neural_network_cifar10_vgg_3_dropout_com_data_augmentation.ipynb` - Dropout combined with data augmentation.
   - `16_neural_network_cifar10_vgg_3_dropout_data_augmentation_batchnormalization.ipynb` - Combining dropout, data augmentation, and batch normalization.
+  - `Vicuna_Alpaca7B.ipynb` - Implementation of the Vicuna Alpaca 7B model.
 
 Additional scripts and projects:
 - `acode.py` - General AI code.
